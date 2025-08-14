@@ -399,6 +399,8 @@ error_t es8388_set_voice_volume_0(int volume) {
   else if (volume > 100)
     volume = 100;
   volume /= 3;
+  res = es_write_reg(address, ES8388_DACCONTROL4, 0);
+  res |= es_write_reg(address, ES8388_DACCONTROL5, 0);
   // ROUT1VOL LOUT1VOL 0 -> -45dB; 33 -> – 4.5dB
   res = es_write_reg(address, ES8388_DACCONTROL24, volume);
   res |= es_write_reg(address, ES8388_DACCONTROL25, volume);

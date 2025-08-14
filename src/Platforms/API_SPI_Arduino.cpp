@@ -1,4 +1,5 @@
 #ifdef ARDUINO
+#include <Arduino.h>
 #include "API_SPI.h"
 #include "SPI.h"
 

@@ -6,7 +6,7 @@ if (DEFINED ESP_PLATFORM)
     idf_component_register(
         SRC_DIRS src/Platforms src/Driver/ac101 src/Driver/cs42448 src/Driver/es7243 src/Driver/es8156 src/Driver/es8374 src/Driver/pcm3168 src/Driver/wm8960 src/Driver/wm8994 src/Driver/cs43l22 src/Driver/es7210 src/Driver/es7243e src/Driver/es8311 src/Driver/es8388 src/Driver/tas5805m src/Driver/wm8978
         INCLUDE_DIRS src 
-        REQUIRES hal driver
+        REQUIRES hal driver arduino-esp32
     )
     # activate ESP32 I2C
     add_compile_definitions(ESP32 ESP32_CMAKE)
